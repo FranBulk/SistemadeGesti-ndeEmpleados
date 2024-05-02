@@ -69,11 +69,11 @@ class GestorEmpleados:
                 antiguedad = numeroantiguedad(num_empleado, self.numerosdeempleado)
                 os.system("cls")
                 añosdeantiguedad = {'Novato':"NOVATO", 'Veterano':"VETERANO", 'Fundador':'FUNDADOR'} #Diccionario para la antiguedad
-                if ((antiguedad>1) and (antiguedad<=9)):
+                if ((antiguedad>=1) and (antiguedad<=9)):
                     print(añosdeantiguedad["Novato"])
-                elif ((antiguedad>10) and (antiguedad<=30)):
+                elif ((antiguedad>=10) and (antiguedad<=30)):
                     print(añosdeantiguedad["Veterano"])
-                elif ((antiguedad>31) and (antiguedad<=50)):
+                elif ((antiguedad>=31) and (antiguedad<=50)):
                     print(añosdeantiguedad["Fundador"])
                 return f"Nombre: {empleado.nombre} {empleado.apellido}\nCorreo: {empleado.correo}\nAntigüedad: {antiguedad} años"
         return "No se encontró ningún empleado con ese número."
